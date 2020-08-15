@@ -1,0 +1,113 @@
+<html lang="en">
+  <head>
+    <script>
+      function generate() {
+        let x = Math.floor(Math.random() * 20 + 1).toString();
+        if (x.length == 1) {
+          x = "0" + x;
+        }
+        let redditAvatar = [
+          "A5A4A4",
+          "545452",
+          "A06A42",
+          "C18D42",
+          "FF4500",
+          "FF8717",
+          "FFB000",
+          "FFD635",
+          "DDBD37",
+          "D4E815",
+          "94E044",
+          "46A508",
+          "46D160",
+          "0DD3BB",
+          "25B79F",
+          "008985",
+          "24A0ED",
+          "0079D3",
+          "7193FF",
+          "4856A3",
+          "7E53C1",
+          "FF66AC",
+          "DB0064",
+          "EA0027",
+          "FF585B",
+        ];
+        const snoo =
+          redditAvatar[Math.floor(Math.random() * redditAvatar.length)];
+        let img =
+          "<img src='https://www.redditstatic.com/avatars/avatar_default_" +
+          x +
+          "_" +
+          snoo +
+          ".png'>";
+        document.querySelector("#view").innerHTML = img;
+        document.querySelector("#snoo").innerHTML = "Snoo style : " + x;
+        document.querySelector("#hexcode").innerHTML = "Hexcode : #" + snoo;
+        document.querySelector("#hexcode").style.color = "#" + snoo;
+        document.querySelector("#generate").style.backgroundColor = "#" + snoo;
+      }
+    </script>
+    <style>
+      body {
+        background-color: rgb(248, 245, 245);
+        margin: 0;
+      }
+      #text {
+        margin-bottom: 3%;
+        margin-top: 5%;
+      }
+      .container {
+        text-align: center;
+        padding: 20px 15px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        width: 300px;
+        margin: auto;
+        background-color: white;
+        height: 380px;
+      }
+      .container button {
+        margin-top: 15px;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 15px;
+        font-size: 20px;
+        background-color: yellowgreen;
+        border: none;
+        color: white;
+      }
+      #view {
+        height: 256px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snoo (The Reddit alien) Generator</title>
+  </head>
+  <body onload="generate()">
+    <div id="text" style="text-align: center;">
+      <h2>Snoo (The Reddit alien) Generator</h2>
+    </div>
+    <div class="container">
+      <div id="view"></div>
+      <br />
+      <div id="snoo"></div>
+      <div id="hexcode"></div>
+      <div id="load">Loading...</div>
+      <button id="generate" onclick="generate()">
+        Generate
+      </button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#view").ready(function () {
+          $("#load").hide();
+        });
+      });
+    </script>
+  </body>
+</html>
