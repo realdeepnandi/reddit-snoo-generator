@@ -1,0 +1,24 @@
+{
+  "name": "reddit-snoo-generator",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@mui/material": "^5.15.11",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.1"
+  }
+}
