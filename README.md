@@ -21,6 +21,10 @@ expects Vite to compile `/src/main.tsx` at runtime, which does not happen when
 served from Pages. To deploy the app you need to build the project first and
 upload the contents of the generated `dist` folder.
 
+When building for GitHub Pages you also need to set Vite's `base` option so
+that asset URLs include the repository name. This project already sets
+`base: '/reddit-snoo-generator/'` in `vite.config.ts`.
+
 ```bash
 npm run build
 ```
